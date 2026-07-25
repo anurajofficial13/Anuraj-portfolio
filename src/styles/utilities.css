@@ -1,0 +1,89 @@
+/* Apple Frosted Glass & Linear Surfaces */
+.glass {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.glass-linear {
+    background: rgba(15, 17, 23, 0.7);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dark .glass-linear {
+    background: rgba(15, 17, 23, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-linear:hover {
+    border-color: rgba(99, 102, 241, 0.35);
+    box-shadow: 0 0 30px -5px rgba(99, 102, 241, 0.12);
+}
+
+/* Linear Specular Border & Shimmer Text */
+.text-shimmer {
+    background: linear-gradient(110deg, #ffffff 40%, rgba(255, 255, 255, 0.5) 50%, #ffffff 60%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 4s infinite linear;
+}
+
+@keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Refined Custom Cursor & Hover Expansion Glow */
+#cursor {
+    width: 8px;
+    height: 8px;
+    top: 0;
+    left: 0;
+    background: #818cf8;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 10000;
+    margin-top: -4px;
+    margin-left: -4px;
+    transition: width 0.2s cubic-bezier(0.16, 1, 0.3, 1), height 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease;
+}
+
+#cursor-blur {
+    width: 36px;
+    height: 36px;
+    top: 0;
+    left: 0;
+    border: 1px solid rgba(129, 140, 248, 0.25);
+    background: rgba(129, 140, 248, 0.03);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    margin-top: -18px;
+    margin-left: -18px;
+    transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, background-color 0.3s ease;
+}
+
+#cursor.cursor-hover {
+    width: 14px;
+    height: 14px;
+    margin-top: -7px;
+    margin-left: -7px;
+    background: #6366f1;
+}
+
+#cursor-blur.blur-hover {
+    width: 52px;
+    height: 52px;
+    margin-top: -26px;
+    margin-left: -26px;
+    border-color: rgba(99, 102, 241, 0.5);
+    background: rgba(99, 102, 241, 0.12);
+}
+
+@media (max-width: 768px) {
+    #cursor, #cursor-blur { display: none !important; }
+}
