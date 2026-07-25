@@ -36,7 +36,7 @@ export const projects = [
     category: "Web Development",
     desc: "Developed responsive web pages and customized functionality.",
     url: "https://embuddy.backb.in",
-    img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=1200",
+    img: "https://images.unsplash.com/photo-1527137342181-19aab11a8ee8?auto=format&fit=crop&q=80&w=1200",
     icon: "Zap"
   },
   {
