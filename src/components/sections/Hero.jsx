@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ChevronRight, Layers } from 'lucide-react';
 import Button from '../ui/Button';
 import Badge from '../ui/Badge';
+import { scrollToSection } from '../../utils/scroll';
 
 export default function Hero() {
   const [parallaxOffset, setParallaxOffset] = useState({ x: 0, y: 0 });
@@ -42,11 +43,11 @@ export default function Hero() {
               Web Developer with hands-on experience in WordPress, WooCommerce, Shopify, and custom web development. Skilled in PHP, MySQL, HTML, CSS, JavaScript, Figma, Canva, and Photopea.
             </p>
             <div className="flex flex-wrap gap-3.5 pt-2">
-              <Button href="#projects" variant="primary" className="group">
+              <Button onClick={() => scrollToSection('projects')} variant="primary" className="group">
                 View Projects{' '}
                 <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button href="#contact" variant="secondary">
+              <Button onClick={() => scrollToSection('contact')} variant="secondary">
                 Contact Me
               </Button>
             </div>
