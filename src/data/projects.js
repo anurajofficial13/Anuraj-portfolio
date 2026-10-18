@@ -32,12 +32,20 @@ export const projects = [
     icon: "Smartphone"
   },
   {
-    title: "EmBuddy",
-    category: "Web Development",
-    desc: "Developed responsive web pages and customized functionality.",
-    url: "https://embuddy.backb.in",
-    img: "https://images.unsplash.com/photo-1527137342181-19aab11a8ee8?auto=format&fit=crop&q=80&w=1200",
-    icon: "Zap"
+    title: "Truscope Trading",
+    category: "Export & Trade",
+    desc: "Agricultural export house website showcasing premium commodities, certifications, and global trade.",
+    url: "https://truscopetrading.com/",
+    img: "/images/truscope.webp",
+    icon: "TrendingUp"
+  },
+  {
+    title: "Thobal",
+    category: "Civil & Contracting",
+    desc: "Corporate contracting website for turnkey civil construction and structural steel fabrication.",
+    url: "https://www.thobal.com/",
+    img: "/images/thobal.webp",
+    icon: "Building2"
   },
   {
     title: "Abacus VAT",
