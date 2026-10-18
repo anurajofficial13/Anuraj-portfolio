@@ -27,6 +27,29 @@ export default function Header({ isDark, toggleTheme }) {
     setIsMobileMenuOpen(false);
   };
 
+  const handleHomeClick = (e) => {
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) {
+      return;
+    }
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (window.location.hash) {
+      window.history.pushState(null, '', window.location.pathname);
+    }
+  };
+
+  const handleMobileHomeClick = (e) => {
+    handleHomeClick(e);
+    closeMobileMenu();
+  };
+
+  useEffect(() => {
+    if (window.location.hash === '#home') {
+      window.history.replaceState(null, '', window.location.pathname);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, []);
+
   return (
     <>
       <header
@@ -38,14 +61,19 @@ export default function Header({ isDark, toggleTheme }) {
         }`}
       >
         <div className="container mx-auto px-6 flex justify-between items-center">
-          <a href="#home" className="text-base font-bold tracking-tight text-slate-900 dark:text-white flex items-center gap-2 group">
+          <a
+            href="/"
+            onClick={handleHomeClick}
+            className="text-base font-bold tracking-tight text-slate-900 dark:text-white flex items-center gap-2 group"
+          >
             <span className="w-2.5 h-2.5 rounded-full bg-indigo-500 group-hover:scale-125 transition-transform duration-300"></span>
             <span className="tracking-tighter font-extrabold">ANURAJ.P</span>
           </a>
 
           <nav className="hidden md:flex items-center gap-10">
             <a
-              href="#home"
+              href="/"
+              onClick={handleHomeClick}
               className="text-[11px] uppercase tracking-[0.2em] font-bold text-slate-500 hover:text-indigo-600 dark:text-slate-400 dark:hover:text-white transition-colors"
             >
               Home
@@ -101,7 +129,11 @@ export default function Header({ isDark, toggleTheme }) {
         <button id="menu-close" onClick={closeMobileMenu} className="absolute top-6 right-6 text-white">
           <X className="w-8 h-8" />
         </button>
-        <a href="#home" onClick={closeMobileMenu} className="mob-link text-3xl font-extrabold text-white tracking-tighter">
+        <a
+          href="/"
+          onClick={handleMobileHomeClick}
+          className="mob-link text-3xl font-extrabold text-white tracking-tighter"
+        >
           Home
         </a>
         <a href="#about" onClick={closeMobileMenu} className="mob-link text-3xl font-extrabold text-white tracking-tighter">
