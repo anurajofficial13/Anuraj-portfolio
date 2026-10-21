@@ -2,6 +2,7 @@ export const projects = [
   {
     title: "Weekend Goo",
     category: "Community & Brand",
+    type: "code",
     desc: "Nature-focused community brand site for weekend getaways and slow living.",
     url: "https://weekendgoo.com",
     img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=1200",
@@ -10,6 +11,7 @@ export const projects = [
   {
     title: "Kleos Intelligence",
     category: "Corporate Web",
+    type: "wordpress",
     desc: "Developed and customized a corporate website.",
     url: "https://new.kleosint.com",
     img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200",
@@ -18,6 +20,7 @@ export const projects = [
   {
     title: "Qi Balance Clinic",
     category: "Healthcare",
+    type: "wordpress",
     desc: "Built a healthcare website with responsive design and improved navigation.",
     url: "https://qibalanceclinic.com",
     img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1200",
@@ -26,6 +29,7 @@ export const projects = [
   {
     title: "Manganam",
     category: "WordPress Custom",
+    type: "wordpress",
     desc: "Customized WordPress website and enhanced user experience.",
     url: "https://manganam.thepoeticads.com",
     img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
@@ -34,6 +38,7 @@ export const projects = [
   {
     title: "Truscope Trading",
     category: "Export & Trade",
+    type: "code",
     desc: "Agricultural export house website showcasing premium commodities, certifications, and global trade.",
     url: "https://truscopetrading.com/",
     img: "/images/truscope.webp",
@@ -42,6 +47,7 @@ export const projects = [
   {
     title: "Thobal",
     category: "Civil & Contracting",
+    type: "code",
     desc: "Corporate contracting website for turnkey civil construction and structural steel fabrication.",
     url: "https://www.thobal.com/",
     img: "/images/thobal.webp",
@@ -50,6 +56,7 @@ export const projects = [
   {
     title: "Abacus VAT",
     category: "Modern UI & Optimization",
+    type: "wordpress",
     desc: "Built website sections with modern UI practices and optimization.",
     url: "https://abacusvat.com",
     img: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&q=80&w=1200",
@@ -58,6 +65,7 @@ export const projects = [
   {
     title: "Fitout Space",
     category: "Interior & Fit-out",
+    type: "code",
     desc: "Website for a UAE-based interior design and fit-out company.",
     url: "https://fitoutspace.com",
     img: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1200",
